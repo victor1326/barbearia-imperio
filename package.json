@@ -6,7 +6,8 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "migrate": "prisma migrate dev --name dev"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -39,6 +40,7 @@
     "@radix-ui/react-tooltip": "1.1.6",
     "@vercel/analytics": "latest",
     "autoprefixer": "^10.4.20",
+    "bcrypt": "^6.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "1.0.4",
@@ -47,8 +49,10 @@
     "geist": "latest",
     "input-otp": "1.4.1",
     "lucide-react": "^0.454.0",
+    "mini-css-extract-plugin": "^2.9.4",
     "next": "14.2.16",
     "next-themes": "^0.4.6",
+    "prisma": "^6.16.2",
     "react": "^18",
     "react-day-picker": "9.8.0",
     "react-dom": "^18",
@@ -62,6 +66,7 @@
     "zod": "3.25.67"
   },
   "devDependencies": {
+    "@prisma/client": "^6.16.2",
     "@tailwindcss/postcss": "^4.1.9",
     "@types/node": "^22",
     "@types/react": "^18",

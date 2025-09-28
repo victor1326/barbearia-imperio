@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../lib/generated/prisma"
+
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String     @id @default(cuid())
+  email    String     @unique
+  name     String
+  password String
+  Schedule Schedule[]
+
+  @@map("users")
+}
+
+model Schedule {
+  id       String  @id @default(cuid())
+  title    String
+  barber   String
+  price    String
+  date     DateTime
+  client   User    @relation(fields: [clientId], references: [id])
+  clientId String
+
+  @@map("schedules")
+}
