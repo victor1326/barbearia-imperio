@@ -3,3 +3,5 @@ node_modules/
 /lib/generated/prisma
 
 /lib/generated/prisma
+.next/
+/.next/
