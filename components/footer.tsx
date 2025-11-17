@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react"
+import Image from "next/image"
+import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react'
 
 export function Footer() {
   return (
@@ -8,13 +9,16 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and Description */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">I</span>
-              </div>
-              <span className="font-playfair text-xl font-bold text-primary">Imperio do Corte</span>
+            <div className="flex items-center justify-center md:justify-start">
+              <Image
+                src="/ide-logo.png"
+                alt="Imperio do Corte Logo"
+                width={48}
+                height={48}
+                className="h-12 w-12"
+              />
             </div>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed text-center md:text-left">
               Experiência premium em cuidados pessoais com ambiente sofisticado e profissionais especializados.
             </p>
           </div>

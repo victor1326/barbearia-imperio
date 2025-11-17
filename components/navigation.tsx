@@ -3,7 +3,8 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { Menu, X } from 'lucide-react'
+import Image from "next/image"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -12,12 +13,14 @@ export function Navigation() {
     <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">I</span>
-            </div>
-            <span className="font-playfair text-xl font-bold text-primary">Imperio do Corte</span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/ide-logo.png"
+              alt="Imperio do Corte"
+              width={48}
+              height={48}
+              className="h-12 w-12"
+            />
           </Link>
 
           {/* Desktop Navigation */}
